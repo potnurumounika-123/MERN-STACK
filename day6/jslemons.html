@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input type="number" id="lemons" value="">
+	<button onclick="mouni()">SUBMIT</button>
+	<p id="demo"></p>
+</body>
+<script type="text/javascript">
+	function mouni() {
+		var lem=document.getElementById("lemons").value;
+		var lem=Number(lem);
+		let text=(lem<0)? "enter valid data":!(Number.isInteger(lem)&&(lem<21))?(21-lem): "insuffientS";
+		document.getElementById("demo").innerHTML = text;
+		
+	}
+	
+</script>
+</html>

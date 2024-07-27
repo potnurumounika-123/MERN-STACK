@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<button onclick="mouni()">CLICK ME</button>
+	<P id="mango"> how is this coming into my website?</P>
+</body>
+<script type="text/javascript">
+	function mouni() 
+	{
+		var a;
+		if (confirm('tell me your answer?'))
+			{
+				a='i am mounika';
+			}
+		else 
+		{
+			a='nobody visit your wedsite';
+		}
+		document.getElementById('mango').innerHTML=a;
+	}
+</script>
+</html>

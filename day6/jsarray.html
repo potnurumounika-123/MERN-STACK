@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<p id="mouni1"></p>
+</body>
+<script>
+	const s=["Apple","Bat","Cat","Dog","Elephant"];
+	let size = s.length;
+	document.write(size);
+	document.write("<br>");
+	document.getElementById("mouni").innerHTML = s.toString();
+	document.write("<br>");
+	let a= s.at(2);
+	document.write(a);
+	document.write("<br>");
+	document.getElementById("mouni").innerHTML = s.join("*");
+	document.write("<br>");
+	let b = s.pop();
+	document.write(b);
+	document.write("<br>");
+	let c = s.push("Fish");
+	document.write(c);
+
+</script>
+</html>

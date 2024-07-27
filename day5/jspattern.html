@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<button onclick="mouni()">RESULT</button>
+	<p id="mango"></p>
+</body>
+<script>
+
+	function mouni() 
+	{
+		var i,j;
+		for(i=97;i<=122;i++)
+		{
+			for(j=97;j<=i;j++)
+				{
+					document.getElementById('mango').innerHTML+=(String.fromCharCode(j)+" ");
+				}
+			document.getElementById('mango').innerHTML+="<br>"
+		}
+	}
+</script>
+</html>

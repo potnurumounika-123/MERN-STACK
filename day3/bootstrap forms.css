@@ -1,0 +1,5 @@
+function formValidation()
+{
+	var uemail = document.registration.email;
+	var passid = document.registration.passid;
+}
