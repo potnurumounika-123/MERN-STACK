@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>task2</title>
+<style>
+	body
+	{
+		background-color: cadetblue;
+	}
+	.signup-box
+	{
+		width: 360px;
+		height: 700px;
+		margin: auto;
+		background-color: white;
+		border-radius: 10px;
+		margin-top: 60px;
+	}
+	h1
+	{
+		text-align: center;
+		padding-top: 40px;
+	}
+	form
+	{
+		width: 300px;
+		margin-left: 20px;
+	}
+	form label
+	{
+		display: grid;
+		margin-top: 10px;
+		font-size: 18px;
+	}
+	form input
+	{
+		width: 100%;
+		border-radius: 1px;
+	}
+	button[type="button"]
+	{
+		width: 320px;
+		height: 30px;
+		margin-top: 20px;
+		border-radius: 10px;
+		background-color: skyblue;
+		font-size: 15px;
+	}
+	input[type="radio"] 
+    {
+        width: auto;
+    }
+    .radio-button 
+    {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    input[type="checkbox"] 
+    {
+        width: auto;
+    }
+    .check-box 
+    {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+	p
+	{
+		text-align: center;
+		font-size: 15px;
+	}
+	.para
+	{
+		text-align: center;
+		color: white;
+		margin-top: 15px;
+	}
+</style>
+</head>
+<body>
+<div class="signup-box">
+<h1>Sign Up</h1>
+<form action="sanju3.html">
+<label>First Name<label>
+<input type="text" id="firstname" name="firstname" required>
+<label>Last Name<label>
+<input type="text" id="lastname" name="lastname" required>
+<label>Email<label>
+<input type="email" id="email" name="email" required>
+<label>Password<label>
+<input type="password" id="password" name="password" required>
+<label>Confrim Password<label>
+<input type="password" id="confrimpassword" name="confrimpassword" required>
+<label for="reg-country">Choose Country</label>
+<select name="reg-country" id="reg-country" required>
+<option value="">Choose Country</option>
+<option value="india">India</option>
+<option value="usa">USA</option>
+<option value="uk">UK</option>
+<option value="australia">Australia</option>
+</select>
+<label>Do you have a passport?</label>
+<div class="radio-button">
+<input type="radio" name="passport" id="yes" value="yes">YES
+<input type="radio" name="passport" id="no" value="no">NO
+</div>
+<div class="check-box">
+<input type="checkbox" name="declaration" id="declaration" required> The give information is correct.
+</div>
+<button type="button">Sign up</button>
+</form>
+<p>By clicking the sign up button,you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a> </p>
+</div>
+<p class="para">Already have an account?<a href="login.html">Login</a></p>
+</body>
+</html>
