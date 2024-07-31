@@ -1,0 +1,47 @@
+Use ciet
+db.createUser({ user: "perfectadmin", pwd: "123456", roles: [{ role: "userAdminAnyDatabase", db: "admin" }] });
+db.getUsers() 
+
+
+db.createRole({ role: "userAdminAnyDatabase", privileges: [ { resource: { db: "ciet", collection: "" }, actions: [ "find", "update", "insert", "remove" ] } ], roles: [] });
+
+Create - Insert 
+Retrieve - Find 
+Update - Update 
+Delete - Remove 
+
+db.getRoles() 
+ 
+db.createRole({ role: "balajiAnyDatabase", privileges: [ { resource: { db: "ciet", collection: "" }, actions: [ "find", "update", "insert", "remove" ] } ], roles: [] });
+
+db.stats() = to find out the size of your MongoDB database 
+
+db.salaries.aggregate( [{ $match : { amount : { $gt : 50000, $lte : 75000 } } }] );
+
+db.student.aggregate([{$match: {courses: {$in: ["Python","Java"]}}}])
+
+db.student.aggregate([{$match: {courses: {$nin: ["Python","Java"]}}}])
+
+db.createCollection("department", {
+  validator: { 
+    $jsonSchema: {
+      bsonType: "object",
+      required: [ "depname", "email" ],
+      properties: {
+        depname: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        email: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        }
+      }
+    }
+  }
+});
+db.department.insertOne({depname:"cse",age:25,email:"abcd@gmail.com"}); 
+db.department.deleteOne({depname:"IT" }) 
+db.department.deleteMany({depname:"ME"})
+db.department.findOneAndDelete({depname:"robotics"}) 
+db.department.findOneAndDelete({depname:"mech"}) 
